@@ -29,6 +29,9 @@ def main():
     uploaded_file=st.file_uploader(label="Selecciona una muestra para analizar. (Audio en ogg)", type=["ogg"])
     if uploaded_file is not None:
         data, samplerate = sf.read(uploaded_file)
+
+  
+        st.write(print(uploaded_file))
         st.write("Audio:")
         st.audio(uploaded_file)
         st.write("Gráfica de la señal:")
@@ -177,7 +180,6 @@ def main():
        
         st.write('Segundos de empresa: ', p2)
         st.write('Segundos de exterior: ', p1)
-        
-
 if __name__ == '__main__':
     main()
+       
